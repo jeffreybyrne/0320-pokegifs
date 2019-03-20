@@ -14,5 +14,5 @@ for type in poke_body['types']:
 
 giphy_response = requests.get(f"https://api.giphy.com/v1/gifs/search?api_key={giphy_key}&q={pokemon_name}&limit=1")
 giphy_body = json.loads(giphy_response.content)
-url = giphy_body['data'][0]['url']
-print(f"The location of the gif is: {url}")
+gif_url = giphy_body['data'][0]['url']
+print(f"The location of the gif is: {gif_url}")
